@@ -1,5 +1,6 @@
-// api/analyse.js
+// api/analyze.js
 
+require('dotenv').config();
 const { ImageAnnotatorClient } = require('@google-cloud/vision');
 const axios = require('axios');
 
@@ -123,10 +124,33 @@ function generateMoodCards(mood) {
   return cards[mood] || cards['neutral'];
 }
 
-// Export functions
-module.exports = {
-  detectTextEmotion,
-  detectImageEmotion,
-  combineEmotions,
-  generateMoodCards
+// API Route handler
+module.exports = async (req, res) => {
+  if (req.method === 'POST') {
+    try {
+      const { text, image } = req.body;
+
+      let textEmotion = 'neutral';
+      let imageEmotion = 'neutral';
+
+      if (text) {
+        textEmotion = await detectTextEmotion(text);
+      }
+      
+      if (image) {
+        imageEmotion = await detectImageEmotion(image);
+      }
+
+      const combinedEmotion = combineEmotions(imageEmotion, textEmotion);
+      const moodCards = generateMoodCards(combinedEmotion);
+
+      return res.status(200).json({ emotion: combinedEmotion, cards: moodCards });
+    } catch (error) {
+      console.error('Error in processing the emotion:', error);
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+  } else {
+    // Handle unsupported methods
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 };

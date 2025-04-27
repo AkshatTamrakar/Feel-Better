@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1><span>Our</span> Music Library</h1>
+  <p class="subtitle">Relax your mind with a curated collection of calming and empowering tunes.</p>
+  <div class="music-library">
+    <!-- Music Cards -->
+    <div class="music-card">
+      <div class="cover"><img class="image" src="images/calm.jpg" alt="" height="100%" width="100%" ></div>
+      <div class="music-info">
+        <div class="music-title">Calm Breeze</div>
+        <div class="music-artist">Nature Tones</div>
+        <button class="play-button" data-audio="cp_music/chill.mp3">Play</button>
+      </div>
+      </div>
+    
+    <div class="music-card">
+      <div class="cover"><img class="image" src="images/chill.jpg" alt="" height="100%" width="100%" ></div>
+      <div class="music-info">
+        <div class="music-title">Just chill</div>
+        <div class="music-artist"></div>
+        <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+      </div>
+      </div>
+      <div class="music-card">
+        <div class="cover"><img class="image" src="images/classical.jpg" alt="" height="100%" width="100%" ></div>
+        <div class="music-info">
+          <div class="music-title">Classical</div>
+          <div class="music-artist"></div>
+          <button class="play-button" data-audio="cp_music/freedom.mp3">Play</button>
+        </div>
+        </div>
+        <div class="music-card">
+          <div class="cover"><img class="image" src="images/relax.jpg" alt="" height="100%" width="100%" ></div>
+          <div class="music-info">
+            <div class="music-title">relax</div>
+            <div class="music-artist"></div>
+            <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+          </div>
+          </div>
+          <div class="music-card">
+            <div class="cover"><img class="image" src="images/5.jpg" alt="" height="100%" width="100%" ></div>
+            <div class="music-info">
+              <div class="music-title">Calm Breeze</div>
+              <div class="music-artist">Nature Tones</div>
+              <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+            </div>
+            </div>
+            <div class="music-card">
+              <div class="cover"><img class="image" src="images/6.jpg" alt="" height="100%" width="100%" ></div>
+              <div class="music-info">
+                <div class="music-title">Calm Breeze</div>
+                <div class="music-artist">Nature Tones</div>
+                <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+              </div>
+              </div>
+              <div class="music-card">
+                <div class="cover"><img class="image" src="images/7.jpg" alt="" height="100%" width="100%" ></div>
+                <div class="music-info">
+                  <div class="music-title">Calm Breeze</div>
+                  <div class="music-artist">Nature Tones</div>
+                  <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+                </div>
+                </div>
+                <div class="music-card">
+                  <div class="cover"><img class="image" src="images/8.jpg" alt="" height="100%" width="100%" ></div>
+                  <div class="music-info">
+                    <div class="music-title">Calm Breeze</div>
+                    <div class="music-artist">Nature Tones</div>
+                    <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+                  </div>
+                  </div>
+                  <div class="music-card">
+                    <div class="cover"><img class="image" src="images/9.jpg" alt="" height="100%" width="100%" ></div>
+                    <div class="music-info">
+                      <div class="music-title">Calm Breeze</div>
+                      <div class="music-artist">Nature Tones</div>
+                      <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+                    </div>
+                    </div>
+                    <div class="music-card">
+                      <div class="cover"><img class="image" src="images/10.jpg" alt="" height="100%" width="100%" ></div>
+                      <div class="music-info">
+                        <div class="music-title">Calm Breeze</div>
+                        <div class="music-artist">Nature Tones</div>
+                        <button class="play-button" data-audio="cp_music/relax.mp3">Play</button>
+                      </div>
+                      </div>
+
+  <!-- Player Bar -->
+  <div class="player-bar" id="playerBar" style="display: none;">
+    <div class="now-playing" id="nowPlaying">Now Playing: </div>
+    <div class="progress-container" id="progressContainer">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="controls">
+      <button id="pausePlayBtn">⏸</button>
+      <button id="nextBtn">⏭</button>
+    </div>
+  </div>
+
+  <script src="index.js">
+   
+  </script>
+  
+</body>
+
+</html>

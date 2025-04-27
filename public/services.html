@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+    
+</head>
+<body>
+    <div id="responseOutput" class="output-box"></div>
+    <div class="services-heading">
+        <h2>Need <span>Help ?</span></h2>
+       
+      </div>
+      
+    <div class="services-container">
+        <div class="service-card card-1">
+          <img src="images/talk.jpg" alt="Service 1">
+          <!-- <span class="tag">Chat with your AI Friend</span> -->
+          <h3>AI Chat Friend</h3>
+          <p>Free your mind , talk with AI</p>
+          <a href="/emotion-detection-app/ai-friend/public/index.html"><button class="use-now-btn">Use Now</button></a>
+        </div>
+      
+        <div class="service-card card-2">
+          <img src="images/ref.jpg" alt="Service 2">
+          <!-- <span class="tag">Check now </span> -->
+          <h3>Depression Test</h3>
+          <p>Take your depression test now </p>
+          <a href="/emotion-detection-app/depression-test/public/index.html"><button class="use-now-btn">Use Now</button></a>
+
+        </div>
+
+      
+        <div class="service-card card-3">
+          <img src="images/mood.jpg" alt="Service 3">
+          <!-- <span class="tag">Music</span> -->
+          <h3>Listen Music</h3>
+          <p>Calm your mind</p>
+         <a href="/music/index.html"><button class="use-now-btn" >Use Now</button></a>
+
+        </div>
+      
+        <div class="service-card card-4">
+          <img src="images/self-help.jpg" alt="Service 4">
+          <!-- <span class="tag">Books</span> -->
+          <h3>Books Library</h3>
+          <p>Self Help Books</p>
+        <a href="/books/"> <button class="use-now-btn">Use Now</button></a> 
+
+        </div>
+      </div>
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const output = document.getElementById('responseOutput');
+          const data = JSON.parse(localStorage.getItem('moodData'));
+      
+          if (!data || !data.mood) {
+            output.innerHTML = "<p>Unable to load mood analysis. Please try again.</p>";
+            return;
+          }
+      
+          const { mood, cards } = data;
+          let html = `<h3>You are feeling ${mood.charAt(0).toUpperCase() + mood.slice(1)}</h3>`;
+          html += `<div class="card-container">`;
+      
+          
+      
+          html += `</div>`;
+          output.innerHTML = html;
+      
+          
+        });
+        
+
+
+
+      </script>
+      
+</body>
+</html>

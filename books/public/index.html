@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>BookLibrary</h1>
+  </header>
+
+  <section class="book-grid" id="bookGrid">
+    <!-- Book Cards -->
+    <div class="book-card" data-title="The Psychology of Money">
+      <img class="book-cover" src="images/psy.jpg" alt="The Psychology of Money"/>
+      <div class="book-info">
+        <h4>The Psychology of Money</h4>
+        <p>Morgan Housel</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="The Rudest book ever">
+      <img class="book-cover" src="images/rudest.jpg" alt="The Rudest Book Ever"/>
+      <div class="book-info">
+        <h4>The Rudest Book Ever</h4>
+        <p>Shwetabh Gangwar</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="It Starts with Us">
+      <img class="book-cover" src="images/starts.jpg" alt="It Starts with Us"/>
+      <div class="book-info">
+        <h4>It Starts with Us</h4>
+        <p>Colleen Hoover</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="It Ends With Us">
+      <img class="book-cover" src="images/end.jpg" alt="It Ends With Us"/>
+      <div class="book-info">
+        <h4>It Ends With Us</h4>
+        <p>Colleen Hoover</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="Ikigai">
+      <img class="book-cover" src="images/iki.jpg" alt="Ikigai"/>
+      <div class="book-info">
+        <h4>Ikigai</h4>
+        <p>Francesc Miralles and Hector Garcia</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="The Alchemist">
+      <img class="book-cover" src="images/alchem.jpg" alt="The Alchemist"/>
+      <div class="book-info">
+        <h4>The Alchemist</h4>
+        <p>Paulo Coelho</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="Atomic Habits">
+      <img class="book-cover" src="images/atom.jpg" alt="Atomic Habits"/>
+      <div class="book-info">
+        <h4>Atomic Habits</h4>
+        <p>James Clear</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="Do Epic Shit">
+      <img class="book-cover" src="images/do epic.png" alt="Do Epic Shit"/>
+      <div class="book-info">
+        <h4>Do Epic Shit</h4>
+        <p>Ankoor Warikoo</p>
+      </div>
+    </div>
+    <div class="book-card" data-title="The 48 Laws of Power">
+      <img class="book-cover" src="images/power.jpg" alt="The 48 Laws of Power"/>
+      <div class="book-info">
+        <h4>The 48 Laws of Power</h4>
+        <p>Robert Greene</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ask-ai">
+    <h2>Ask AI for Book Summary</h2>
+    <input type="text" id="askInput" placeholder="Enter book title..." />
+    <button onclick="askAI()">Ask</button>
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="popupContainer" class="popup-container hidden">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <div id="aiResponse" class="ai-response"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

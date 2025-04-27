@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Share Your Selfie & Feelings</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="selfie-section">
+    <div class="container">
+      <div class="text-side">
+        <h2>Share Your Selfie & Feelings</h2>
+        <p>Your emotions matter. Let our AI understand how you feel and offer a peaceful voice in return.</p>
+        
+        <label class="custom-file-upload">
+          Upload Selfie
+          <input type="file" id="uploadSelfie" accept="image/*" />
+        </label>
+        <p id="file-name" class="filename-display"></p>
+
+        <textarea id="feelingsInput" placeholder="Tell us how you're feeling today..."></textarea>
+        <button class="analyze-btn">Analyze</button>
+
+      </div>
+
+      <div class="image-side">
+        <img src="tell.jpg" alt="Peaceful Mind" />
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

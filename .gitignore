@@ -1,3 +1,4 @@
 .env
+keys/
 keys/credentials.json
 node_modules

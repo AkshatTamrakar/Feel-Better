@@ -147,6 +147,7 @@ function generateMoodCards(mood) {
   return cards[mood] || cards['neutral'];
 }
 
+const { detectTextEmotion, detectImageEmotion, combineEmotions, generateMoodCards } = require('./public/analyse');
 // API Endpoint
 app.post('/analyze', async (req, res) => {
   const { image, text } = req.body;

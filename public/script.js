@@ -24,7 +24,7 @@ analyzeBtn.addEventListener('click', async () => {
   try {
     const base64Image = await toBase64(file);
 
-    const response = await fetch('http://localhost:3000/analyze', {
+    const response = await fetch('/api/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ image: base64Image, text })

@@ -150,7 +150,7 @@ app.get('/', (req, res) => {
 
 
 // API Endpoint
-app.post('/api/analyze', async (req, res) => {
+app.post('/public/analyze', async (req, res) => {
   const { image, text } = req.body;
 
   if (!image || !text) {
